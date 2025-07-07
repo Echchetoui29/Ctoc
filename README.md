@@ -34,7 +34,13 @@ docker-compose up -d
 docker exec -it ctoc_laravel.test_1 bash
 ```
 
-### 5. Install Node Dependencies and Build Assets
+### 5. Generate key 
+
+```bash
+php artisan key:generate
+```
+
+### 6. Install Node Dependencies and Build Assets
 
 Inside the container:
 
@@ -43,7 +49,7 @@ npm install
 npm run build
 ```
 
-### 6. Run Migrations
+### 7. Run Migrations
 
 ```bash
 php artisan migrate
